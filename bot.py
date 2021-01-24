@@ -1,7 +1,8 @@
 import logging
 import telebot
 import random
-from aiogram import *
+# from aiogram import *
+from aiogram import Bot, Dispatcher, executor, types
 import configparser
 from aiogram.types import ReplyKeyboardRemove, \
     ReplyKeyboardMarkup, KeyboardButton, \
@@ -60,6 +61,12 @@ async def test(message: types.Message):
 async def messages(message: types.Message):
 	await bot.send_message(message.chat.id, 'Как дела? Если ты Бочок напиши 1')
     
+@dp.message_handler(lambda message: message.text.lower() == "1")
+async def messages(message: types.Message):
+	await bot.send_message(message.chat.id, 'Как дела? Если ты Бочок напиши 1')
+    
+
+
 		# bot.send_message(message.chat.id, 'Поздравляю ты Бочок')
 
 
