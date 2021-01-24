@@ -1,5 +1,5 @@
 import logging
-import telebot
+# import telebot
 import random
 # from aiogram import *
 from aiogram import Bot, Dispatcher, executor, types
@@ -10,7 +10,7 @@ from aiogram.types import ReplyKeyboardRemove, \
 from aiogram.dispatcher.filters import CommandStart
 
 
-from telebot import types
+# from telebot import types
 
 
 
